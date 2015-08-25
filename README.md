@@ -1,3 +1,18 @@
+not-random
+===
+
+https://gist.github.com/mathiasbynens/5670917 wrapped up in a node module
+
+useage:
+
+```js
+var random = require('not-random');
+
+console.log(random());
+```
+
+This needed to be included too:
+
 Copyright 2012 the V8 project authors. All rights reserved.
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are
