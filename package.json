@@ -1,0 +1,22 @@
+{
+  "name": "not-random",
+  "version": "1.0.0",
+  "description": "https://gist.github.com/mathiasbynens/5670917 as a module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "random"
+  ],
+  "author": "Moshe Kolodny",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kolodny/not-random.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kolodny/not-random/issues"
+  },
+  "homepage": "https://github.com/kolodny/not-random#readme"
+}
