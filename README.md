@@ -8,7 +8,7 @@ useage:
 ```js
 var random = require('not-random');
 
-console.log(random());
+console.log(random()); // 0.9872818551957607 // always the same for first call
 ```
 
 This needed to be included too:
