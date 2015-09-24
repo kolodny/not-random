@@ -1,5 +1,4 @@
-module.exports = (function() {
-  var seed = 0x2F6E2B1;
+var createRandomizer = function(seed) {
   return function() {
     // Robert Jenkins’ 32 bit integer hash function
     seed = ((seed + 0x7ED55D16) + (seed << 12))  & 0xFFFFFFFF;
@@ -10,4 +9,11 @@ module.exports = (function() {
     seed = ((seed ^ 0xB55A4F09) ^ (seed >>> 16)) & 0xFFFFFFFF;
     return (seed & 0xFFFFFFF) / 0x10000000;
   };
+}
+
+module.exports = (function() {
+  var seed = 0x2F6E2B1;
+  createRandomizer(seed);
 }());
+
+exports.createRandomizer = createRandomizer;
