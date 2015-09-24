@@ -1,4 +1,5 @@
 var createRandomizer = function(seed) {
+  if (typeof seed !== 'string') seed = stringHash(seed);
   return function() {
     // Robert Jenkins’ 32 bit integer hash function
     seed = ((seed + 0x7ED55D16) + (seed << 12))  & 0xFFFFFFFF;
@@ -11,9 +12,20 @@ var createRandomizer = function(seed) {
   };
 }
 
+var stringHash = function(str) {
+  var hash = 0, i, chr, len;
+  if (str.length == 0) return hash;
+  for (i = 0, len = str.length; i < len; i++) {
+    chr   = str.charCodeAt(i);
+    hash  = ((hash << 5) - hash) + chr;
+    hash |= 0; // Convert to 32bit integer
+  }
+  return hash;
+};
+
 module.exports = (function() {
   var seed = 0x2F6E2B1;
-  createRandomizer(seed);
+  return createRandomizer(seed);
 }());
 
-exports.createRandomizer = createRandomizer;
+module.exports.createRandomizer = createRandomizer;

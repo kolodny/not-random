@@ -1,6 +1,6 @@
 {
   "name": "not-random",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "https://gist.github.com/mathiasbynens/5670917 as a module",
   "main": "index.js",
   "scripts": {
