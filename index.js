@@ -1,5 +1,5 @@
 var createRandomizer = function(seed) {
-  if (typeof seed !== 'string') seed = stringHash(seed);
+  if (typeof seed === 'string') seed = stringHash(seed);
   return function() {
     // Robert Jenkins’ 32 bit integer hash function
     seed = ((seed + 0x7ED55D16) + (seed << 12))  & 0xFFFFFFFF;

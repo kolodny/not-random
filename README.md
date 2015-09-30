@@ -9,6 +9,11 @@ useage:
 var random = require('not-random');
 
 console.log(random()); // 0.9872818551957607 // always the same for first call
+
+var createRandomizer = require('not-random').createRandomizer;
+createRandomizer('some seed')(); // 0.8496127128601074
+createRandomizer('some seed')(); // 0.8496127128601074
+createRandomizer('some seed1')(); // 0.6809375695884228
 ```
 
 This needed to be included too:
